@@ -3,7 +3,7 @@ let backendHost;
 
 const hostname = window && window.location && window.location.hostname;
 
-if (hostname === 'https://minishop-dc5.herokuapp.com') {
+if (hostname === 'minishop-react.herokuapp.com') {
     backendHost = 'https://minishop-dc5.herokuapp.com';
 } else {
     backendHost = process.env.REACT_APP_BACKEND_HOST || 'http://localhost:3000';
