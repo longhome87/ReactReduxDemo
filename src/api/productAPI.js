@@ -1,5 +1,7 @@
 import axios from 'axios';
-const baseURL = 'http://localhost:3000/api/products'
+import { API_ROOT } from './api-config';
+
+const baseURL = { API_ROOT } + 'products';
 export const getProductAPI = (queryString) => {
 	let url = baseURL;
 	if (queryString) {

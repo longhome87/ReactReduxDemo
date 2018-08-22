@@ -1,7 +1,10 @@
 import axios from 'axios';
-const url = 'http://localhost:3000/api/users'
+import { API_ROOT } from './api-config';
+
+const baseURL = { API_ROOT } + 'users';
 export const signUpAPI = (email, password) => {
-	return axios.post(url + '/signup', {
+	let url = baseURL + '/signup';
+	return axios.post(url, {
 		txtEmail: email,
 		txtPassword: password
 	}).then(res => {
@@ -12,7 +15,8 @@ export const signUpAPI = (email, password) => {
 }
 
 export const signInAPI = (email, password) => {
-	return axios.post(url + '/signin', {
+	let url = baseURL + '/signin';
+	return axios.post(url, {
 		txtEmail: email,
 		txtPassword: password
 	}).then(res => {
